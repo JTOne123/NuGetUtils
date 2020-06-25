@@ -5,7 +5,16 @@
      <TargetFramework>netcoreapp2.1</TargetFramework>
      <PackAsTool>true</PackAsTool>
      <ToolCommandName>nuget-deploy</ToolCommandName>
-   </PropertyGroup>
+   
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
 
    <ItemGroup>
       <ProjectReference Include="..\NuGetUtils.Lib.Tool\NuGetUtils.Lib.Tool.csproj" />
